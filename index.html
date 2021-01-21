@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style></style>
+    <title>Random</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <button class="btncal btn btn-success mt-2 btn-primary" type="submit">Random</button>
+        </form>
+    </div>
+
+
+    <div class="result" style="text-align: center; align-items: center; font-size: 45px; border: 1px solid yellow; box-sizing: border-box; border-radius: 5px;"></div>
+
+    <script>
+      const randomBtn = document.querySelector('.btncal');
+      const result = document.querySelector('.result')
+      randomBtn.addEventListener('click', addrandom);
+       function addrandom(event) {
+      event.preventDefault();
+      const randomCalculate =  Math.random().toString(36).substr(5);
+      result.innerHTML = randomCalculate;}
+
+    </script>
+</body>
+</html>
