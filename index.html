@@ -17,6 +17,9 @@
 
         <form action="">
             <button class="btncal btn btn-success mt-2 btn-primary  margin-top: 50px;" type="submit">Random</button>
+
+            <input class="result" type="text" value="Hello World" id="myInput">
+            <button onclick="myFunction()">Copy text</button>
         </form>
     </div>
 
@@ -33,6 +36,15 @@
       result.className = 'bbb';
     
     }
+
+
+       function myFunction() {
+         var copyText = document.getElementById("myInput");
+         copyText.select();
+         copyText.setSelectionRange(0, 99999)
+         document.execCommand("copy");
+         alert("Copied the text: " + copyText.value);
+      }
 
     </script>
 </body>
